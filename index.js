@@ -10,8 +10,8 @@ const client = new Client({
 });
 
 // YOUR REAL IDS
-const INTRO_CHANNEL_ID = "1502760276326482111";
-const MEMBER_ROLE_ID = "1508436343875833906";
+const INTRO_CHANNEL_ID = process.env.INTRO_CHANNEL_ID;
+const MEMBER_ROLE_ID = process.env.MEMBER_ROLE_ID;
 
 client.on("messageCreate", async (message) => {
   if (message.author.bot) return;
